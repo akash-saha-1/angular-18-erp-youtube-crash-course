@@ -1,0 +1,59 @@
+<div class="row">
+    @if(isLoader){
+        <div class="col-12 text-center">
+          <div class="spinner-border text-success"></div>
+        </div>
+      } @else {
+        <div class="col-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Serial No</th>
+                        <th>Role Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let role of roleList; let srNo=index">
+                        <td>{{srNo+1}}</td> 
+                        <td>{{role.role}}</td> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
+
+
+
+
+
+
+
+
+<!-- <div class="row">
+    <div class="col-4">
+        {{firstName}}
+    </div>
+    <div class="col-4">{{isActive}}</div>
+    <div class="col-4">{{currentDate}}</div>
+</div>
+<br/><br/>
+<div class="row">
+    <div class="col-4">
+        <input type="text" class="form-control" [value]="firstName" />
+    </div>
+    <div class="col-4">
+        <input type="text" class="form-control" [(ngModel)]="firstName" />
+    </div>
+</div>
+
+<br/>
+<div class="row">
+    <div class="col-4">
+        <button type="text" class="btn btn-success" (click)="showWelcomeAlert()">Show Welcome Alert</button>
+    </div>
+    <div class="col-4">
+        <button type="text" class="btn btn-success" (click)="showMessage('Show Message param')">Show Message</button>
+    </div>
+
+</div> -->
